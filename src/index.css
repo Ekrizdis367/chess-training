@@ -432,7 +432,6 @@ button:focus-visible {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   border: 3px solid #4a5d32;
   border-radius: 8px;
-  overflow: hidden;
   background: #5a6c3d;
 }
 [data-theme="dark"] .endgames-board-wrap .board-wrapper {
@@ -634,7 +633,6 @@ button:focus-visible {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   border: 3px solid #4a5d32;
   border-radius: 8px;
-  overflow: hidden;
   background: #5a6c3d;
 }
 [data-theme="dark"] .openings-board-wrap .board-wrapper {
@@ -843,7 +841,6 @@ button:focus-visible {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   border: 3px solid #4a5d32;
   border-radius: 8px;
-  overflow: hidden;
   background: #5a6c3d;
 }
 [data-theme="dark"] .memory-board-wrap .board-wrapper {
@@ -1481,7 +1478,6 @@ button:focus-visible {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   border: 3px solid #4a5d32;
   border-radius: 8px;
-  overflow: hidden;
   background: #5a6c3d;
 }
 [data-theme="dark"] .section-main-board .board-wrapper {
@@ -2047,7 +2043,7 @@ button:focus-visible {
   flex-shrink: 0;
   width: min(90vw, 420px);
   aspect-ratio: 1;
-  padding: 12px;
+  line-height: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -2058,12 +2054,8 @@ button:focus-visible {
 }
 .board-wrapper [id$="-board"] {
   width: 100% !important;
-  aspect-ratio: 1;
-  max-height: 100%;
-}
-.board-wrapper [data-square] {
-  box-sizing: border-box;
-  border: 1px solid #000;
+  height: 100% !important;
+  border-radius: inherit;
 }
 
 .message {

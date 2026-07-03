@@ -71,7 +71,15 @@ export function ChessBoard({
   const boardPosition = !position || position === 'start' ? startFen : position;
 
   return (
-    <div className="board-wrapper" ref={boardRef} style={boardWidth ? { width: boardWidth, maxWidth: '100%' } : undefined}>
+    <div
+      className="board-wrapper"
+      ref={boardRef}
+      style={
+        boardWidth
+          ? { width: boardWidth, height: boardWidth, maxWidth: '100%', aspectRatio: '1 / 1' }
+          : undefined
+      }
+    >
       <Chessboard
         options={{
           position: boardPosition,
