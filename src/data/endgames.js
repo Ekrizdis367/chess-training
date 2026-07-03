@@ -1,0 +1,14 @@
+/** Piece codes: w/b + K,Q,R,B,N,P. Use 'vs' in the array for a divider. iconPiece = single piece for nav (no wK). */
+/** helpFen = starting position (White to move); helpMovesSequence = hardcoded SAN moves for the demo. */
+export const endgameCategories = [
+  { slug: 'kr-vs-k', name: 'Rook', iconPiece: 'wR', pieces: ['wK', 'wR', 'vs', 'bK'], description: 'Basic rook checkmate', helpFen: '4k3/8/8/4K3/8/8/R7/8 w - - 0 1', helpMovesSequence: ['Ra1', 'Ke7', 'Ra8', 'Kd7', 'Ra7+', 'Ke8', 'Ke6', 'Kd8', 'Kd6', 'Kc8', 'Rc7+', 'Kd8', 'Ke6', 'Ke8', 'Rc8#'] },
+  { slug: 'kbn-vs-k', name: 'Knight/Bishop', iconPiece: 'wN', pieces: ['wK', 'wB', 'wN', 'vs', 'bK'], description: 'Bishop and knight checkmate', helpFen: '4k3/8/4K3/6N1/4B3/8/8/8 w - - 0 1', helpMovesSequence: ['Nf7+', 'Kf8', 'Nd6', 'Kg8', 'Ne8', 'Kh8', 'Bh7+', 'Kh7', 'Bf5#'] },
+  { slug: 'kbb-vs-k', name: 'Bishops', iconPiece: 'wB', pieces: ['wK', 'wB', 'wB', 'vs', 'bK'], description: 'Try to win the two bishops ending.', helpFen: '3k4/8/8/4B3/4B3/8/8/4K3 w - - 0 1', helpMovesSequence: ['Bd5', 'Ke8', 'Bc6+', 'Kf8', 'Bd6+', 'Kg8', 'Bd5+', 'Kh8', 'Bf6#'] },
+  { slug: 'pawn', name: 'Pawns', iconPiece: 'wP', pieces: ['wK', 'wP', 'vs', 'bK'], description: 'King and pawn vs king, opposition, key squares', helpFen: '4k3/8/4P3/4K3/8/8/8/8 w - - 0 1', helpMovesSequence: ['Kd6', 'Kd8', 'e7+', 'Kc8', 'e8=Q+', 'Kb7', 'Qd7+', 'Ka8', 'Kc7', 'Ka7', 'Qa4#'] },
+  { slug: 'queen', name: 'Queen', iconPiece: 'wQ', pieces: ['wK', 'wQ', 'vs', 'bK'], description: 'Queen vs pawn, queen vs rook', helpFen: '4k3/8/4K3/8/8/8/8/4Q3 w - - 0 1', helpMovesSequence: ['Qe2', 'Kd8', 'Kd6', 'Kc8', 'Qc2+', 'Kb8', 'Qb2+', 'Ka8', 'Kc7', 'Ka7', 'Qb7#'] },
+  { divider: true },
+  { slug: 'laddering', name: 'Laddering', iconPiece: 'wR', pieces: ['wK', 'wR', 'wR', 'vs', 'bK'], description: 'Two rooks: ladder (lawnmower) checkmate', helpFen: '5k2/8/8/8/8/8/4R3/4RK2 w - - 0 1', helpMovesSequence: ['Re8+', 'Kf7', 'Rf1+', 'Kg6', 'Rg8+', 'Kh7', 'Rh1#'] },
+  { slug: 'zugzwang', name: 'Zugzwang', pieces: ['wK', 'wP', 'vs', 'bK'], description: 'Zugzwang in endgames', helpFen: '4k3/8/4P3/4K3/8/8/8/8 w - - 0 1', helpMovesSequence: ['Kd6', 'Kd8', 'e7+', 'Kc8', 'e8=Q+', 'Kb7', 'Qd7+', 'Ka8', 'Kc7', 'Ka7', 'Qa4#'] },
+  { slug: 'passed-pawns', name: 'Passed Pawns', pieces: ['wK', 'wP', 'vs', 'bK'], description: 'Passed pawn techniques and promotion', helpFen: '4k3/8/4P3/4K3/8/8/8/8 w - - 0 1', helpMovesSequence: ['Kd6', 'Kd8', 'e7+', 'Kc8', 'e8=Q+', 'Kb7', 'Qd7+', 'Ka8', 'Kc7', 'Ka7', 'Qa4#'] },
+  { slug: 'lucena', name: 'Lucena', pieces: ['wK', 'wR', 'wP', 'vs', 'bK', 'bR'], description: 'Rook and pawn vs rook: building the bridge', helpFen: '4k3/8/4P3/4K3/8/8/8/4R3 w - - 0 1', helpMovesSequence: ['Kd6', 'Kd8', 'e7+', 'Kc8', 'e8=Q+', 'Kb7', 'Qd7+', 'Ka8', 'Kc7', 'Ka7', 'Qa4#'] },
+];
